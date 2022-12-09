@@ -1,9 +1,12 @@
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 
-
-const Language = ({lang}) => {
-    console.log(lang)
+const Language = ({ name, img, options }) => {
+   
   return (
-    <div>Language</div>
+    <Container>
+        <Image src={img} width="70%"></Image>
+    </Container>
   )
 }
 
