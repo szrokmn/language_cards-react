@@ -1,6 +1,7 @@
 
 
-const Language = () => {
+const Language = ({lang}) => {
+    console.log(lang)
   return (
     <div>Language</div>
   )
