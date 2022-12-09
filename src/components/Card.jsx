@@ -7,12 +7,12 @@ import { data } from "../helpers/data";
 const Card = () => {
   console.log(data);
   return (
-    <Container className="rounded-4 mt-4" style={{ background: "#f48b29" }}>
-      <h1>Language</h1>
+    <Container className="rounded-4 mt-4 p-4" style={{ background: "#f48b29" }}>
+      <h1 className="text-white mt-4 my-2">Language</h1>
       <Row>
         {data.map((lang, index) => {
           return (
-            <Col key={index} sm={6} md={4} lg={3}>
+            <Col sm={6} md={4} lg={3} key={index}>
               <Language {...lang}  />
             </Col>
           );
