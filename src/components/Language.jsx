@@ -3,22 +3,23 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
 const Language = ({ name, img, options }) => {
-  const [showDesc, setShowDesc] = useState(false);
-  console.log(showDesc);
+  const [showImage, setShowImage] = useState(true);
+  console.log(showImage);
   return (
     <Container
       style={{ background: "peachpuff" }}
-      className="p-4 rounded-3"
-      onClick={() => setShowDesc(!showDesc)}
+      className="p-4 rounded-3 h-100 lang-card"
+      onClick={() => setShowImage(!showImage)}
+      type="button"
     >
-      {!showDesc && (
+      {showImage && (
         <Container>
-          <Image src={img} width="60%"></Image>
+          <Image src={img} width="70%" className="lang-logo"></Image>
           <h3 className="display-6">{name}</h3>
         </Container>
       )}
-      {showDesc && (
-        <ol>
+      {!showImage && (
+        <ol className="h-100 d-flex flex-column justify-content-center">
           {options.map((item) => {
             return <li className="h5 text-start">{item}</li>;
           })}

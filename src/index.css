@@ -10,4 +10,13 @@ body {
  height: 100vh;
 }
 
+.lang-card:hover{
+  box-shadow: 3px 3px 10px 5px gray; 
+}
 
+.lang-logo{
+  transition: transform 0.2s;
+}
+.lang-card:hover .lang-logo{
+  transform: scale(1.2);
+}
